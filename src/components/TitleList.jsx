@@ -1,4 +1,4 @@
-import Title from "./Title";
+import Title from './Title';
 
 const TitleList = ({ name, titles }) => {
   return (
@@ -7,7 +7,7 @@ const TitleList = ({ name, titles }) => {
         <h1>{name}</h1>
         <div className="titles-wrapper">
           {titles.map((title) => (
-            <Title title={title} />
+            <Title key={title.id} title={title} />
           ))}
         </div>
       </div>

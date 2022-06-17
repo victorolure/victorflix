@@ -1,13 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Title = ({ title }) => {
-  console.log(title);
   const { id, name, poster_path, vote_average, overview } = title;
   return (
     <div className="movie">
-      <a href={`/details/${id}`}>
+      <Link to={`/details/${id}`}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           alt="Movie poster"
@@ -17,7 +17,7 @@ const Title = ({ title }) => {
           <div className="rating">{vote_average}/10</div>
           <div className="plot">{overview}</div>
         </div>
-      </a>
+      </Link>
       <div data-toggled="true" className="listToggle">
         <div>
           <FontAwesomeIcon icon={faPlus} className="fa fa-fw fa-plus" />

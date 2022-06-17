@@ -1,13 +1,13 @@
-import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { searchShows } from "../services/tmdb-api";
-import TitleList from "../components/TitleList";
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { searchShows } from '../services/tmdb-api';
+import TitleList from '../components/TitleList';
 
 const SearchPage = () => {
   const [titles, setTitles] = useState(null);
   const location = useLocation();
   const params = new URLSearchParams(location.search);
-  const query = params.get("query");
+  const query = params.get('query');
 
   useEffect(() => {
     if (query) {
