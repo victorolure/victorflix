@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { searchShows } from '../services/tmdb-api';
 import TitleList from '../components/TitleList';
 
-const SearchPage = () => {
+const SearchPage = ({ watchList, toggle }) => {
   const [titles, setTitles] = useState(null);
   const location = useLocation();
   const params = new URLSearchParams(location.search);
@@ -18,7 +18,12 @@ const SearchPage = () => {
   return (
     <>
       {titles ? (
-        <TitleList name={`shows matching ${query}`} titles={titles} />
+        <TitleList
+          name={`shows matching your search: "${query}"`}
+          titles={titles}
+          watchList={watchList}
+          toggle={toggle}
+        />
       ) : (
         <h2>No matching results</h2>
       )}

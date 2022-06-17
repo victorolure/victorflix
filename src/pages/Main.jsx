@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import providers from "../data/providers";
-import { getShowsByAllProviders } from "../services/tmdb-api";
-import TitleList from "../components/TitleList";
-function MainPage() {
+import { useState, useEffect } from 'react';
+import providers from '../data/providers';
+import { getShowsByAllProviders } from '../services/tmdb-api';
+import TitleList from '../components/TitleList';
+function MainPage({ toggle, watchList }) {
   const [shows, setShows] = useState(null);
 
   useEffect(() => {
@@ -18,6 +18,8 @@ function MainPage() {
               key={showProvider[0]}
               name={showProvider[0]}
               titles={showProvider[1]}
+              toggle={toggle}
+              watchList={watchList}
             />
           );
         })
