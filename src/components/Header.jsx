@@ -1,11 +1,12 @@
 import {Link} from "react-router-dom";
+import victorFlix from '../assets/victorflix.png'
 
 const Header = (props) => {
     return (
         <header className="header">
             <a href="/">
                 <img
-                    src="https://fontmeme.com/temporary/d3992aee6f1963fe7de45968e039489f.png"
+                    src={victorFlix}
                     alt="netflix-font"
                     border="0"
                 />
