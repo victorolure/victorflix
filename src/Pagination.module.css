@@ -1,0 +1,23 @@
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.paginationNav {
+    display: block;
+    appearance: none;
+    padding: 1em 2em;
+    /* background: rgba(255,255,255,0.77); */
+    background: skyblue;
+    border-radius: .3em;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.endOfResults {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 2em 0;
+}

@@ -6,6 +6,8 @@ import placeholder from '../assets/image-not-available.jpg';
 
 const Title = ({ title, toggle, onWatchList }) => {
   const { id, name, poster_path, vote_average, overview } = title;
+  
+  
 
   const poster = poster_path
     ? `https://image.tmdb.org/t/p/w500/${poster_path}`

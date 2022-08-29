@@ -24,7 +24,7 @@ function MainPage({ toggle, watchList }) {
           );
         })
       ) : (
-        <p>Loading... </p>
+        <p>Loading...HOLD ON CHRIS </p>
       )}
     </>
   );

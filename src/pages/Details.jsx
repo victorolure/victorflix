@@ -5,6 +5,7 @@ import { getShowDetails } from '../services/tmdb-api';
 const DetailsPage = ({ watchList, toggle }) => {
   const [showDetails, setShowDetails] = useState(null);
   const { id } = useParams();
+  console.log(showDetails)
 
   const onWatchList =
     watchList.findIndex((item) => item.id === showDetails?.id) === -1
@@ -13,6 +14,7 @@ const DetailsPage = ({ watchList, toggle }) => {
 
   useEffect(() => {
     getShowDetails(id).then((details) => setShowDetails(details));
+    
   }, [id]);
 
   return (
@@ -27,11 +29,11 @@ const DetailsPage = ({ watchList, toggle }) => {
             <h1>{showDetails.name}</h1>
             <div className="description">{showDetails.overview}</div>
             {onWatchList ? (
-              <button className="remove-to-watchlist">
+              <button className="remove-to-watchlist" onClick= {()=>toggle(showDetails)}>
                 - Remove from watch list
               </button>
             ) : (
-              <button className="add-to-watchlist">+ Add to watch list</button>
+              <button className="add-to-watchlist" onClick= {()=>toggle(showDetails)}>+ Add to watch list</button>
             )}
           </div>
         </div>

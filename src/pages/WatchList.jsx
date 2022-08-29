@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import TitleList from '../components/TitleList';
 
 const WatchListPage = ({ watchList, toggle }) => {

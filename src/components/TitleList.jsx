@@ -1,6 +1,7 @@
 import Title from './Title';
 
 const TitleList = ({ name, titles, toggle, watchList }) => {
+  
   return (
     <div className="titleList">
       <div className="title">
